@@ -22,10 +22,6 @@ funcionamento --- por que não experimentar agora?
 Puxe a imagem do Docker
 ([DockerHub](https://hub.docker.com/r/44934045/microbin)):
 
-``` bash
-bash <(curl -s https://microbin.eu/docker.sh)
-```
-
 No nosso site [microbin.eu](https://microbin.eu), você encontrará o
 seguinte:
 
