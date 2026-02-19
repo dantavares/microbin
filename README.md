@@ -19,20 +19,11 @@ funcionamento --- por que não experimentar agora?
 
 ### Ou hospede o MicroBin você mesmo
 
-Run our quick docker setup script
-([DockerHub](https://hub.docker.com/r/danielszabo99/microbin)):
+Puxe a imagem do Docker
+([DockerHub](https://hub.docker.com/r/44934045/microbin)):
 
 ``` bash
 bash <(curl -s https://microbin.eu/docker.sh)
-```
-
-Or install it manually from [Cargo](https://crates.io/crates/microbin):
-
-``` bash
-cargo install microbin;
-curl -L -O https://raw.githubusercontent.com/szabodanika/microbin/master/.env;
-source .env;
-microbin
 ```
 
 No nosso site [microbin.eu](https://microbin.eu), você encontrará o
