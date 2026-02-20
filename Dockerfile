@@ -14,7 +14,11 @@ RUN \
   cargo build --release
 
 # https://hub.docker.com/r/bitnami/minideb
-FROM bitnami/minideb:latest
+#Original - No armv7 support
+#FROM bitnami/minideb:latest
+
+#Support to armv7 CPU
+FROM debian:trixie-slim
 
 # microbin will be in /app
 WORKDIR /app
