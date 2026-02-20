@@ -1,0 +1,28 @@
+{% include "header.html" %}
+
+<form id="auth-form" method="POST" action="{{ args.public_path_as_str() }}/admin/" enctype="multipart/form-data">
+  <label for="username">Usuário Administrador</label>
+  <input id="username-field" placeholder="Usuário" type="username" autocomplete="off" name="username">
+  <label for="password">Senha Administrador</label>
+  <input id="password-field" placeholder="Senha" type="password" autocomplete="off" name="password">
+  <button>Entre</button>
+  {% if status == "incorrect" %}
+  <p>
+    Usuário ou senha inválido!
+  </p>
+  {% endif %}
+</form>
+
+{% include "footer.html" %} {% if !args.pure_html %}
+<style>
+  #auth-form {
+    background-color: var(--background-alt);
+    border-radius: 6px;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+</style>
+{% endif %}

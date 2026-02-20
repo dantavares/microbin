@@ -1,0 +1,82 @@
+{% include "header.html" %}
+<a id="options">
+  <h2>Opções</h2>
+</a>
+
+<a id="expiration">
+  <h3>Expiração</h3>
+</a>
+<p>
+  Use o menu de expiração para escolher por quanto tempo seu envio ficará disponível.
+  Quando o tempo selecionado expirar, ele será removido do servidor.
+</p>
+
+{% if args.enable_burn_after %}
+<a id="burn-after">
+  <h3>Autodestruir após</h3>
+</a>
+<p>
+  Use o menu de autodestruição para definir um limite de quantas vezes seus dados podem ser
+  acessados antes de serem removidos do servidor.
+</p>
+{%- endif %}
+
+{% if args.highlightsyntax %}
+<a id="syntax">
+  <h3>Realce de Sintaxe</h3>
+</a>
+<p>
+  Use o menu de realce de sintaxe para ativar o destaque de código no seu envio, facilitando a leitura.
+  Você pode escolher que o realce seja feito pelo seu navegador, que
+  também reconhecerá a linguagem automaticamente. Você pode selecionar o realce no servidor,
+  onde será necessário escolher a linguagem manualmente, mas o código
+  receberá destaque mesmo sem JavaScript.
+</p>
+{%- endif %}
+
+<a id="password">
+  <h3>Senha</h3>
+</a>
+<p>
+  Use o campo de senha para definir uma senha para seu envio. Isso irá criptografar
+  seus dados enquanto estiverem armazenados no nosso servidor usando sua senha, e você precisará
+  informar a senha para acessar (em envios privados ou secretos) ou para
+  modificar (em envios somente leitura). Sua senha é criptografada e, no caso
+  de envios secretos, nós nunca sequer a vemos.
+</p>
+
+<a id="privacy">
+  <h3>Privacidade</h3>
+</a>
+<p>
+  Use este menu para selecionar o nível de proteção que seu envio precisa. Utilize
+  níveis mais baixos se você ou sua organização hospedam o MicroBin, e níveis mais altos
+  se estiver usando um serviço público do MicroBin.
+</p>
+<h4>Nível 1: Público</h4>
+<p>Este nível de privacidade permite que qualquer pessoa encontre, visualize, modifique e remova seu envio.</p>
+<h4>Nível 2: Não listado (recomendado)</h4>
+<p>Envios não listados não podem ser encontrados, a menos que alguém conheça seu identificador único e aleatório.
+  Se alguém conhecer esse identificador, poderá visualizar, modificar e remover
+  do envio.</p>
+<h4>Nível 3: Somente leitura</h4>
+<p>Com essa configuração de privacidade, o envio não pode ser encontrado a menos que alguém conheça
+  seu identificador único e aleatório. Se alguém conhecer esse identificador, poderá visualizar
+  o conteúdo, mas não poderá modificar ou remover sem informar a senha
+  do envio.
+</p>
+<h4>Nível 4: Privado</h4>
+<p>Com essa configuração de privacidade, o envio não pode ser encontrado a menos que alguém conheça
+  seu identificador único e aleatório. Se alguém conhecer esse identificador, não poderá
+  see, modify or remove it without entering the password of do envio. Your
+  envio e seus anexos são criptografados, portanto ficam armazenados com segurança.</p>
+<h4>Nível 5: Secreto</h4>
+<p>Com essa configuração de privacidade, o envio não pode ser encontrado a menos que alguém conheça
+  seu identificador único e aleatório. Se alguém conhecer esse identificador, não poderá
+  see, modify or remove it without entering the password of do envio. Your
+  navegador nos envia uma versão já criptografada, portanto os dados não criptografados e
+  a senha nunca sequer saem do seu dispositivo. Essa opção exige que você informe sua
+  senha várias vezes ao acessar seus dados, mas é extremamente segura.</p>
+
+
+{% include "footer.html" %}

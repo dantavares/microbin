@@ -1,0 +1,16 @@
+{% if !args.hide_footer %}
+
+<p style="font-size: small; text-align: center;margin-top: 2rem;">
+    {% if args.footer_text.as_ref().is_none() %}
+    <a href="https://microbin.eu">MicroBin</a> by Dániel Szabó and the FOSS Community.
+	<BR>
+	Traduzido para o PT-BR Por Daniel Tavares - <a href="https://github.com/dantavares/microbin">Github</a>
+	{%- else %} {{ args.footer_text.as_ref().unwrap()|safe }} {%-
+    endif %}
+</p>
+
+{%- endif %}
+
+</body>
+
+</html>
