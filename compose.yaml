@@ -1,7 +1,6 @@
 services:
   microbin:
     image: 44934045/microbin:v210
-    container_name: microbin
     restart: always
     
     ports:
