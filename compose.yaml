@@ -1,11 +1,15 @@
 services:
   microbin:
     image: 44934045/microbin:v210
+    container_name: microbin
     restart: always
+    
     ports:
      - "${MICROBIN_PORT}:8080"
+    
     volumes:
      - ./microbin-data:/app/microbin_data
+    
     environment:
       MICROBIN_BASIC_AUTH_USERNAME: ${MICROBIN_BASIC_AUTH_USERNAME}
       MICROBIN_BASIC_AUTH_PASSWORD: ${MICROBIN_BASIC_AUTH_PASSWORD}
