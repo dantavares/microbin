@@ -20,7 +20,7 @@ O MicroBin é uma aplicação web de pastebin extremamente leve, rica em recurso
 ### Versão armv7: 
 `docker pull 44934045/microbin:armv7` <br>
 `docker buildx build --no-cache --platform linux/arm/v7 -t 44904045/microbin:armv7 .` <br>
-`docker compose  -f compose _armv7.yaml --env-file .env up --detach` <br>
+`docker compose -f compose_armv7.yaml --env-file .env up --detach` <br>
 
 No nosso site [microbin.eu](https://microbin.eu), você encontrará o seguinte:
 -   [Screenshots](https://microbin.eu/screenshots/)
